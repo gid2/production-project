@@ -9,12 +9,11 @@ import {Navbar} from "widgets/Navbar";
 
 const  App: FC = () =>  { 
 
-const {theme,toggleTheme } = useTheme()
+const {theme } = useTheme()
     return (
         <div className={classNames('app', {}, [theme])}>
             <Navbar />
             <AppRouter></AppRouter>
-            <button onClick={toggleTheme}>Toogle</button>
         </div>
     )
 }
