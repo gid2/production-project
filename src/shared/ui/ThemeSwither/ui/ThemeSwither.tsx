@@ -1,16 +1,16 @@
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from './ThemeSwither.module.scss'
-import {Theme, useTheme} from "App/providers/ThemeProvider";
-import DarkIcon from 'shared/assets/icons/theme-dark.svg'
-import LightIcon from 'shared/assets/icons/theme-light.svg'
-import {Button, ThemeButton} from "shared/ui/Button/Button";
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Theme, useTheme } from 'App/providers/ThemeProvider';
+import DarkIcon from 'shared/assets/icons/theme-dark.svg';
+import LightIcon from 'shared/assets/icons/theme-light.svg';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import cls from './ThemeSwither.module.scss';
 
 interface ThemeSwitherProps {
     className?: string;
 }
 
-export const ThemeSwither = ({className}: ThemeSwitherProps) => {
-    const {theme,toggleTheme } = useTheme()
+export const ThemeSwither = ({ className }: ThemeSwitherProps) => {
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <Button
@@ -19,11 +19,8 @@ export const ThemeSwither = ({className}: ThemeSwitherProps) => {
             onClick={toggleTheme}
         >
             {theme === Theme.DARK
-                ?
-                <DarkIcon/>
-                :
-                <LightIcon/>
-            }
+                ? <DarkIcon />
+                : <LightIcon />}
         </Button>
     );
 };
