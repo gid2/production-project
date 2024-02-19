@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "start": "webpack serve --env port=3000",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "llint:scss": "npx stylelint \"**/*.scss\"",
-    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix"
+    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+    "unit": "jest --config config/jest/jest.config.ts"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +19,9 @@
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
+    "@babel/preset-typescript": "^7.23.3",
     "@svgr/webpack": "^8.1.0",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.11.17",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
@@ -45,6 +47,7 @@
     "html-webpack-plugin": "^5.5.0",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.4.3",
+    "jest": "^27.5.1",
     "mini-css-extract-plugin": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
