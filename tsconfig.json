@@ -14,9 +14,18 @@
             "*": ["./src/*"]
         }
     },
-"ts-node": {
-    "compilerOptions": {
-    "module": "CommonJS"
+    "ts-node": {
+        "compilerOptions": {
+        "module": "CommonJS"
+        },
     },
+    "include": [
+        "./config/jest/setupTests.ts",
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "styles.d.ts"
+    ],
+    "exclude": ["node_modules"]
 }
-}
+
