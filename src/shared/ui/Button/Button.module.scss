@@ -18,13 +18,13 @@
 }
 
 .background {
-    background: var(--bg-color) ;
+    background: var(--bg-color);
     color: var(--primary-color);
     border: none;
 }
 
 .background_Inverted {
-    background: var(--inverted-bg-color) ;
+    background: var(--inverted-bg-color);
     color: var(--inverted-primary-color);
     border: none;
 }
@@ -36,27 +36,29 @@
 .square.size_m {
     width: var(--font-line-m);
     height: var(--font-line-m);
-    font: var(--font-m)
+    font: var(--font-m);
 }
 
 .square.size_l {
     width: var(--font-line-l);
     height: var(--font-line-l);
-    font: var(--font-l)
+    font: var(--font-l);
 }
 
 .square.size_xl {
     width: var(--font-line-xl);
     height: var(--font-line-xl);
-    font: var(--font-xl)
+    font: var(--font-xl);
 }
 
 .size_m {
-    font: var(--font-m)
+    font: var(--font-m);
 }
+
 .size_l {
-    font: var(--font-m)
+    font: var(--font-m);
 }
+
 .size_xl {
-    font: var(--font-m)
+    font: var(--font-m);
 }
