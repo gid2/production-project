@@ -7,13 +7,13 @@
     opacity: 0;
     pointer-events: none;
     z-index: -1;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
-.Modal.dark {
-    --bg-color: #090949;
-    --primary-color: #049604;
-}
+//.Modal.dark {
+//    --bg-color: #090949;
+//    --primary-color: #049604;
+//}
 
 .overlay {
     width: 100%;
@@ -28,7 +28,6 @@
     padding: 20px;
     border-radius: 12px;
     background: var(--bg-color);
-
     transition: 0.3s;
     transform: scale(0.5);
     max-width: 60%;
@@ -36,7 +35,7 @@
 
 .opened {
     pointer-events: auto;
-    opacity: 1 ;
+    opacity: 1;
     z-index: var(--modal-z-index);
 
     .content {
