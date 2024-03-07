@@ -7,9 +7,11 @@ const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || T
 
 interface ThemeProviderProps {
     children: ReactNode; // Типизация свойства children
+    initialTheme?: Theme;
   }
 
-const ThemeProvider: FC<React.PropsWithChildren<ThemeProviderProps>> = ({ children }) => {
+// eslint-disable-next-line max-len
+const ThemeProvider: FC<React.PropsWithChildren<ThemeProviderProps>> = ({ children, initialTheme }) => {
     const [theme, setTheme] = useState<Theme>(defaultTheme);
 
     const defaultProps = useMemo(() => ({
