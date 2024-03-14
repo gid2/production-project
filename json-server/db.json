@@ -25,5 +25,16 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+
+  "profile": {
+    "first": "Гид",
+    "lastname": "Гендугов",
+    "age": 21,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://autosport.com.ru/files/styles/896x504/public/news/2021/01/19/107838-86d7f2be-2bea-4fee-9d89-2dd95326d52d.jpg?itok=S3lGg2Tk"
+  }
+
 }
