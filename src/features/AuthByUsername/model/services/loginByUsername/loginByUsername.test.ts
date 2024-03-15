@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import { userActions } from 'entities/User';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { loginByUsername } from './loginByUsername';
@@ -63,6 +62,6 @@ describe('loginByUsername.test', () => {
         expect(thunk.dispatch).toHaveBeenCalledTimes(2);
         expect(mockedAxios.post).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('rejected');
-        expect(result.payload).toBe('Вы ввели неверный логин или пароль');
+        expect(result.payload).toBe('error');
     });
 });
