@@ -29,7 +29,7 @@ export interface LoginFormProps {
     onSuccess: () => void;
 }
 
-const initialREducers: ReducerList = {
+const initialReducers: ReducerList = {
     loginForm: loginReducer,
 };
 
@@ -59,7 +59,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     return (
         <DynamicModuleLoader
             removeAfterUnmount
-            reducers={initialREducers}
+            reducers={initialReducers}
         >
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text title={t('Форма авторизации')} />

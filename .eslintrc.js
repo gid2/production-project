@@ -58,6 +58,7 @@ module.exports = {
             'error',
             { argsIgnorePattern: '^_' },
         ],
+        'no-undef': 'off'
     },
     globals: {
         __IS_DEV__: true,
