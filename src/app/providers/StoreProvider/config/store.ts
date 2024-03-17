@@ -1,25 +1,40 @@
-import { ReducersMapObject, configureStore } from '@reduxjs/toolkit';
+import { ReducersMapObject, configureStore, CombinedState } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
-import { StateSchema } from './StateSchema';
+import { $api } from 'shared/api/api';
+import { NavigateOptions } from 'react-router';
+import { To } from '@remix-run/router/history';
+import { Reducer } from 'redux';
 import { createReducerManager } from './reducerManager';
+import { StateSchema, ThunkExtraArg } from './StateSchema';
 
 export function createReduxStore(
     initialState?: StateSchema,
-    asynkReducers?: ReducersMapObject<StateSchema>,
+    asyncReducers?: ReducersMapObject<StateSchema>,
+    navigate?: (to: To, options?: NavigateOptions) => void,
 ) {
     const rootReducers: ReducersMapObject<StateSchema> = {
-        ...asynkReducers,
+        ...asyncReducers,
         counter: counterReducer,
         user: userReducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);
 
-    const store = configureStore<StateSchema>({
-        reducer: reducerManager.reduce,
+    const sxtraArg: ThunkExtraArg = {
+        api: $api,
+        navigate,
+    };
+
+    const store = configureStore({
+        reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
         devTools: __IS_DEV__,
         preloadedState: initialState,
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+            thunk: {
+                extraArgument: sxtraArg,
+            },
+        }),
     });
 
     // @ts-ignore
