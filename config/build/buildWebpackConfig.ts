@@ -1,10 +1,10 @@
 import webpack from 'webpack';
-import { builLoaders } from './builLoaders';
 import { buildResolvers } from './buildResolvers';
-import { bulidPlugins } from './bulidPlugins';
 
 import { BuildOptions } from './types/config';
 import { buildDevServer } from './buildDevServer';
+import { buildPlugins } from './bulidPlugins';
+import { buildLoaders } from './builLoaders';
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
     const { paths, mode, isDev } = options;
@@ -15,12 +15,13 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             filename: '[name].[contenthash].js',
             path: paths.build,
             clean: true,
+            publicPath: '/',
         },
 
-        plugins: bulidPlugins(options),
+        plugins: buildPlugins(options),
 
         module: {
-            rules: builLoaders(options),
+            rules: buildLoaders(options),
         },
         resolve: buildResolvers(options),
         devtool: isDev ? 'inline-source-map' : undefined,

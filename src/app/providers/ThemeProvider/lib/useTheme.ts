@@ -14,13 +14,13 @@ export function useTheme(): useThemeResult {
         switch (theme) {
         case Theme.DARK:
             newTheme = Theme.LIGHT;
-            break
+            break;
         case Theme.LIGHT:
             newTheme = Theme.PINK;
-            break
+            break;
         case Theme.PINK:
             newTheme = Theme.DARK;
-            break
+            break;
         default:
             newTheme = Theme.PINK;
         }
