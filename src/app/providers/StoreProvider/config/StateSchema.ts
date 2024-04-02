@@ -2,7 +2,7 @@ import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import {
-    CombinedState, Dispatch, EnhancedStore, ReducersMapObject,
+    CombinedState, EnhancedStore, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AnyAction, Reducer } from 'redux';
 import { ProfileSchema } from 'entities/Profile';
@@ -11,6 +11,7 @@ import { To } from '@remix-run/router/history';
 import { NavigateOptions } from 'react-router';
 import { ArticleDetailsSchema } from 'entities/Article';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { AddCommentFormSchema } from 'features/addCommentForm';
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -19,6 +20,7 @@ export interface StateSchema {
     profile?: ProfileSchema
     articleDetails?: ArticleDetailsSchema;
     articleDetailsComments?: ArticleDetailsCommentsSchema;
+    addCommentForm?: AddCommentFormSchema;
 }
 export type StateSchemaKey = keyof StateSchema;
 
@@ -41,6 +43,5 @@ export interface ThunkExtraArg {
 export interface ThunkConfig<T> {
     rejectValue: T;
     extra: ThunkExtraArg;
-    dispatch: Dispatch;
     state: StateSchema;
 }

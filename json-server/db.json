@@ -19,7 +19,9 @@
       "img": "https://wp-assets.highcharts.com/svg/javascript.svg",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -112,20 +114,34 @@
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "gid",
       "password": "123",
       "role": "USER",
-      "avatar": "https://sun9-75.userapi.com/impg/ekq53_CMABPtz2buP0vQjHU1owt5P7L7Ia9JaA/3J873s4McSs.jpg?size=720x720&quality=96&sign=c5c49b9da48ece3f61350cdb8095ad18&type=album"
+      "avatar": "https://sun9-1.userapi.com/impg/epwLQnLuUjNDms2albpfU4Qx3CeJ8Zz1MRTutw/sf236PnxxrI.jpg?size=640x803&quality=96&sign=31cac0d26d9288e2f7562e64fdbe3ca9&type=album"
     }
   ],
-  "profile": {
-    "first": "Гид",
-    "lastname": "Гендугов",
-    "age": 21,
-    "currency": "EUR",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://sun1-96.userapi.com/impg/N6rvPeuqeFKoomhZ_eLVLsup2d0QZH3xxeEBGQ/aBwDY3bYqtk.jpg?size=240x240&quality=96&sign=779c1d6be97305dc967c9b410112d40a&type=album"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Гид",
+      "lastname": "Гендугов",
+      "age": 21,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://sun1-96.userapi.com/impg/N6rvPeuqeFKoomhZ_eLVLsup2d0QZH3xxeEBGQ/aBwDY3bYqtk.jpg?size=240x240&quality=96&sign=779c1d6be97305dc967c9b410112d40a&type=album"
+    },
+    {
+      "id": "2",
+      "first": "Гид",
+      "lastname": "Гендугов",
+      "age": 21,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "gid",
+      "avatar": "https://sun9-1.userapi.com/impg/epwLQnLuUjNDms2albpfU4Qx3CeJ8Zz1MRTutw/sf236PnxxrI.jpg?size=640x803&quality=96&sign=31cac0d26d9288e2f7562e64fdbe3ca9&type=album"
+    }
+  ]
 }
