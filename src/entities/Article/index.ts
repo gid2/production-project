@@ -1,3 +1,5 @@
+export { ArticleViewSelector } from 'entities/Article/ui/ArticleViewSelector/ArticleViewSelector';
+
 export { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 
 export {
@@ -12,4 +14,3 @@ export {
 export type {
     ArticleDetailsSchema,
 } from './model/types/articleDetailsSchema';
-
