@@ -8,7 +8,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsername/loginByUsername';
 import {
     DynamicModuleLoader,
-    ReducerList,
+    ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
@@ -29,7 +29,7 @@ export interface LoginFormProps {
     onSuccess: () => void;
 }
 
-const initialReducers: ReducerList = {
+const initialReducers: ReducersList = {
     loginForm: loginReducer,
 };
 

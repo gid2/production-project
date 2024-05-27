@@ -11,7 +11,7 @@ import {
 } from 'features/addCommentForm/model/slices/addCommentFormSlice';
 import {
     DynamicModuleLoader,
-    ReducerList,
+    ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import cls from './AddCommentForm.module.scss';
 
@@ -20,7 +20,7 @@ export interface AddCommentFormProps {
     onSendComment: (text: string) => void
 }
 
-const redusers: ReducerList = {
+const redusers: ReducersList = {
     addCommentForm: addCommentFormReducer,
 };
 

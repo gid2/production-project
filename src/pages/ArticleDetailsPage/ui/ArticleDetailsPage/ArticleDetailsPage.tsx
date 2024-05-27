@@ -7,7 +7,7 @@ import { Text } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
 import {
     DynamicModuleLoader,
-    ReducerList,
+    ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useDispatch, useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
@@ -32,7 +32,7 @@ interface ArticleDetailsPageProps {
     className?: string;
 }
 
-const reducers: ReducerList = {
+const reducers: ReducersList = {
     articleDetailsComments: articleDetailsCommentsReducer,
 };
 

@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import {
     DynamicModuleLoader,
-    ReducerList,
+    ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     fetchProfileData,
@@ -27,7 +27,7 @@ import { profileReducer } from 'entities/Profile/model/slice/profileSlice';
 import { Page } from 'shared/ui/Page/Page';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
-const reducers: ReducerList = {
+const reducers: ReducersList = {
     profile: profileReducer,
 };
 
