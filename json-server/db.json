@@ -14,14 +14,14 @@
   "articles": [
     {
       "id": "1",
-      "title": "Javascript news",
+      "title": "Javascript news Свежая ",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://wp-assets.highcharts.com/svg/javascript.svg",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "26.04.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -41,7 +41,7 @@
       "title": "python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://seo-profik.ru/media/blog/covers/python-luchshij-pervyij-yazyik-programmirovaniya.jpg",
-      "views": 1022,
+      "views": 5204,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -62,14 +62,14 @@
     },
     {
       "id": "3",
-      "title": "GO news",
+      "title": "GO news 2019",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://repository-images.githubusercontent.com/542160980/d4c945b5-4721-4662-a2dd-3118c507c78e",
-      "views": 1022,
+      "views": 9402,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -141,7 +141,7 @@
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {

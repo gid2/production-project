@@ -5,6 +5,8 @@ import { ArticleListItem } from 'entities/Article/ui/ArticleListItem/ArticleList
 import {
     ArticleListItemSkeleton,
 } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
+import { Text, TextSize } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 import cls from './ArticleList.module.scss';
 
 interface ArticleListProps {
@@ -13,6 +15,9 @@ interface ArticleListProps {
     isLoading?: boolean;
     view?: ArticleView;
 }
+
+// eslint-disable-next-line react-hooks/rules-of-hooks
+const { t } = useTranslation();
 
 const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
@@ -36,6 +41,14 @@ export const ArticleList = memo((props: ArticleListProps) => {
             key={article.id}
         />
     );
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+                <Text size={TextSize.L} title={t('Статьи не найдены')} />
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>

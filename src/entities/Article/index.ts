@@ -1,4 +1,5 @@
 export { ArticleViewSelector } from 'entities/Article/ui/ArticleViewSelector/ArticleViewSelector';
+export { ArticleSortSelector } from 'entities/Article/ui/ArticleSortSelector/ArticleSortSelector';
 
 export { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 
@@ -9,8 +10,11 @@ export {
 export {
     Article,
     ArticleView,
+    ArticleSortField,
 } from './model/types/article';
 
 export type {
     ArticleDetailsSchema,
 } from './model/types/articleDetailsSchema';
+
+export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs'
