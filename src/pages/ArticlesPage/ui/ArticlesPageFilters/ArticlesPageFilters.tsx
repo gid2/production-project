@@ -16,7 +16,6 @@ import {
     fetchArticlesList,
 } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
-import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
 import { ArticleType } from 'entities/Article/model/types/article';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
 import {
@@ -71,8 +70,8 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     const onChangeType = useCallback((value: ArticleType) => {
         dispatch(articlesPageActions.setType(value));
         dispatch(articlesPageActions.setPage(1));
-        debouncedFetchData();
-    }, [dispatch, debouncedFetchData]);
+        fetchData();
+    }, [dispatch, fetchData]);
 
     return (
         <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>

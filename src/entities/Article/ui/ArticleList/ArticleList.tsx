@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { memo } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { Article, ArticleView } from 'entities/Article';
 import { ArticleListItem } from 'entities/Article/ui/ArticleListItem/ArticleListItem';
 import {
@@ -14,10 +14,8 @@ interface ArticleListProps {
     articles: Article[];
     isLoading?: boolean;
     view?: ArticleView;
+    target?: HTMLAttributeAnchorTarget;
 }
-
-// eslint-disable-next-line react-hooks/rules-of-hooks
-const { t } = useTranslation();
 
 const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
@@ -31,7 +29,10 @@ export const ArticleList = memo((props: ArticleListProps) => {
         articles,
         isLoading,
         view = ArticleView.SMALL,
+        target,
     } = props;
+
+    const { t } = useTranslation();
 
     const renderArticle = (article: Article) => (
         <ArticleListItem
@@ -39,6 +40,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
             view={view}
             className={cls.card}
             key={article.id}
+            target={target}
         />
     );
 
