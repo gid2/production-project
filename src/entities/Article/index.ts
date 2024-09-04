@@ -17,4 +17,5 @@ export type {
     ArticleDetailsSchema,
 } from './model/types/articleDetailsSchema';
 
-export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs'
+export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
+export { getArticleDetailsData } from './model/selectors/articleDetails/articleDetails';
