@@ -39,7 +39,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const isLoading = useSelector(getArticlesPageIsLoading);
     const view = useSelector(getArticlesPageView);
     const error = useSelector(getArticlesPageError);
-    let [searchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());

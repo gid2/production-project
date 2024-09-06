@@ -35,8 +35,9 @@ export const getSidebarItems = createSelector(
                     icon: ArticleIcon,
                     text: 'Статьи',
                     authOnly: true,
-                },)
-        };
-        return sidebarItemsList
-    }
-)
+                },
+            );
+        }
+        return sidebarItemsList;
+    },
+);

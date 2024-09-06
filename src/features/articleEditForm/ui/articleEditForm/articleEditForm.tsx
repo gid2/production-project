@@ -12,8 +12,6 @@ export const articleEditForm = memo((props: articleEditFormProps) => {
     const { t } = useTranslation();
 
     return (
-        <div className={classNames(cls.articleEditForm, {}, [className])}>
-
-        </div>
+        <div className={classNames(cls.articleEditForm, {}, [className])} />
     );
 });
