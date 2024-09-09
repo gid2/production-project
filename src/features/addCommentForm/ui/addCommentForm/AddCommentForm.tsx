@@ -4,16 +4,16 @@ import { memo, useCallback } from 'react';
 import { Input } from 'shared/ui/Input/Input';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
-import { getAddCommentFormText } from 'features/addCommentForm';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import {
-    addCommentFormActions, addCommentFormReducer,
-} from 'features/addCommentForm/model/slices/addCommentFormSlice';
 import {
     DynamicModuleLoader,
     ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { HStack } from 'shared/ui/Stack';
+import {
+    addCommentFormActions, addCommentFormReducer,
+} from '../../model/slices/addCommentFormSlice';
+import { getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors/addCommentFormSelectors';
 import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {

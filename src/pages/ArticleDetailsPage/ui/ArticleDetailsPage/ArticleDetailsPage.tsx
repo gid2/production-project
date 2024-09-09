@@ -11,28 +11,28 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useDispatch, useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { AddCommentForm } from 'features/addCommentForm';
+import { Page } from 'shared/ui/Page/Page';
+import { VStack } from 'shared/ui/Stack';
 import {
     fetchCommentsByArticleId,
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
-import { AddCommentForm } from 'features/addCommentForm';
+} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import {
     addCommentForArticle,
-} from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
-import { Page } from 'shared/ui/Page/Page';
+} from '../../model/services/addCommentForArticle/addCommentForArticle';
 import {
     getArticleRecommendations,
-} from 'pages/ArticleDetailsPage/model/slices/articleDetailsPageRecommendationsSlice';
-import {
-    getArticleRecommendationsIsLoading,
-} from 'pages/ArticleDetailsPage/model/selectors/recommendations';
-import {
-    fetchArticleRecommendations,
-} from 'pages/ArticleDetailsPage/model/services/fetchArticleRecommendations/fetchArticleRecommendations';
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
+} from '../../model/slices/articleDetailsPageRecommendationsSlice';
 import {
     ArticleDetailsPageHeader,
-} from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
-import { VStack } from 'shared/ui/Stack';
+} from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+import { articleDetailsPageReducer } from '../../model/slices';
+import {
+    fetchArticleRecommendations,
+} from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
+import {
+    getArticleRecommendationsIsLoading,
+} from '../../model/selectors/recommendations';
 import cls from './ArticleDetailsPage.module.scss';
 import {
     getArticleComments,

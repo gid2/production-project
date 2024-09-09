@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { Skeleton } from '../../ui/Skeleton/Skeleton';
 
 export default {
     title: 'shared/Skeleton',
