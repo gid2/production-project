@@ -49,7 +49,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
             <HStack max justify="between" className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
                     className={cls.input}
-                    placeholder={t('Введите текст комеетария')}
+                    placeholder={t('Введите текст комментария')}
                     value={text}
                     onChange={onCommentTextChange}
                 />
