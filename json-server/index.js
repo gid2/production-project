@@ -39,6 +39,41 @@ server.post('/login', (req, res) => {
     }
 });
 
+// Эндпоинт для регистрации
+server.post('/register', (req, res) => {
+    try {
+        const { username, password } = req.body;
+        const dbPath = path.resolve(__dirname, 'db.json');
+        const db = JSON.parse(fs.readFileSync(dbPath, 'UTF-8'));
+        const { users = [] } = db;
+
+        // Проверяем, существует ли уже пользователь с таким именем
+        const userExists = users.some((user) => user.username === username);
+
+        if (userExists) {
+            return res.status(409).json({ message: 'User already exists' });
+        }
+
+        // Создаем нового пользователя с ролью и пустым аватаром
+        const newUser = {
+            id: users.length + 1,
+            username,
+            password,
+            role: 'USER', // Присваиваем базовую роль
+            avatar: '', // Пустой URL аватара
+        };
+        users.push(newUser);
+
+        // Сохраняем обновленные данные в db.json
+        fs.writeFileSync(dbPath, JSON.stringify(db, null, 2), 'UTF-8');
+
+        return res.status(201).json(newUser);
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({ message: e.message });
+    }
+});
+
 // проверяем, авторизован ли пользователь
 // eslint-disable-next-line
 server.use((req, res, next) => {

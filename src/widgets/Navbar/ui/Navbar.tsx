@@ -8,7 +8,9 @@ import { getUserAuthData, userActions } from 'entities/User';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { RegisterForm } from 'features/RegisterByUsername/ui/RegisterForm/RegisterFormAsync.async';
 import cls from './Navbar.module.scss';
+import { RegisterModal } from 'features/RegisterByUsername';
 
 interface NavbarProps {
     className?: string;
@@ -17,6 +19,7 @@ interface NavbarProps {
 export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
+    const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
     const authData = useSelector(getUserAuthData);
     const dispatch = useDispatch();
     const onCloseModal = useCallback(() => {
@@ -24,6 +27,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }, []);
     const onShowModal = useCallback(() => {
         setIsAuthModal(true);
+    }, []);
+
+    const onShowRegisterModal = useCallback(() => {
+        setIsRegisterModalOpen(true);
     }, []);
 
     const onLogout = useCallback(() => {
@@ -70,6 +77,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     isOpen={isAuthModal}
                     onClose={onCloseModal}
                 />
+            )}
+            <Button theme={ButtonTheme.CLEAR_INVERTED} className={cls.links} onClick={onShowRegisterModal}>
+                {t('Регистрация')}
+            </Button>
+            {isRegisterModalOpen && (
+                <RegisterModal isOpen={isRegisterModalOpen} onClose={onCloseModal} />
             )}
         </header>
     );

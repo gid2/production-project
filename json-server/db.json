@@ -689,6 +689,18 @@
       "password": "123",
       "role": "USER",
       "avatar": "https://sun9-1.userapi.com/impg/epwLQnLuUjNDms2albpfU4Qx3CeJ8Zz1MRTutw/sf236PnxxrI.jpg?size=640x803&quality=96&sign=31cac0d26d9288e2f7562e64fdbe3ca9&type=album"
+    },
+    {
+      "id": 3,
+      "username": "gidd",
+      "password": "123"
+    },
+    {
+      "id": 4,
+      "username": "gid3",
+      "password": "123",
+      "role": "USER",
+      "avatar": ""
     }
   ],
   "profile": [

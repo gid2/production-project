@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getLoginUsername } from './getLoginUsername';
+import { getRegisterUsername } from './getRegisterUsername';
 
 describe('getRegisterUsername.test', () => {
     test('should return value', () => {
@@ -8,10 +8,10 @@ describe('getRegisterUsername.test', () => {
                 username: 'gid',
             },
         };
-        expect(getLoginUsername(state as StateSchema)).toEqual('gid');
+        expect(getRegisterUsername(state as StateSchema)).toEqual('gid');
     });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getLoginUsername(state as StateSchema)).toEqual('');
+        expect(getRegisterUsername(state as StateSchema)).toEqual('');
     });
 });
