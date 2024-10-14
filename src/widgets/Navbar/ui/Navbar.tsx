@@ -11,6 +11,8 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { RegisterForm } from 'features/RegisterByUsername/ui/RegisterForm/RegisterFormAsync.async';
 import { RegisterModal } from 'features/RegisterByUsername';
 import cls from './Navbar.module.scss';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 
 interface NavbarProps {
     className?: string;
@@ -52,13 +54,21 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 >
                     {t('Создать статью')}
                 </AppLink>
-                <Button
-                    theme={ButtonTheme.CLEAR_INVERTED}
-                    className={cls.links}
-                    onClick={onLogout}
-                >
-                    {t('Выйти')}
-                </Button>
+                <Dropdown
+                    direction="bottom left"
+                    className={cls.dropdown}
+                    items={[
+                        {
+                            content: t('Профиль'),
+                            href: RoutePath.profile + authData.id,
+                        },
+                        {
+                            content: t('Выйти'),
+                            onClick: onLogout,
+                        },
+                    ]}
+                    trigger={<Avatar size={30} src={authData.avatar} />}
+                />
             </header>
         );
     }
