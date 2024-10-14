@@ -22,7 +22,7 @@ export const registerByUsername = createAsyncThunk<
             const response = await extra.api.post<User>('/register', authData);
 
             if (!response.data) {
-                throw new Error("Failed to register.");
+                throw new Error('Failed to register.');
             }
 
             localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
