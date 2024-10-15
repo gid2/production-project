@@ -16,7 +16,8 @@
     "storybook": "start-storybook -p 6006 -c config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook",
     "start:dev:server": "node ./json-server/index.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate:slice": "./scripts/createSlice/index.js"
   },
   "keywords": [],
   "author": "",
