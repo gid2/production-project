@@ -5,7 +5,6 @@ import {
     CombinedState, EnhancedStore, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AnyAction, Reducer } from 'redux';
-import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
@@ -13,6 +12,8 @@ import { ArticleDetailsSchema } from 'entities/Article';
 import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { UISchema } from 'features/UI';
 import { RegisterSchema } from 'features/RegisterByUsername';
+import { rtkApi } from 'shared/api/rtkApi';
+import { ProfileSchema } from 'features/editableProfileCard';
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -25,6 +26,7 @@ export interface StateSchema {
     articlesPage?: ArticlesPageSchema;
     articleDetailsPage?: ArticleDetailsPageSchema;
     registerForm?: RegisterSchema
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 }
 export type StateSchemaKey = keyof StateSchema;
 export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>

@@ -706,7 +706,7 @@
   "profile": [
     {
       "id": "1",
-      "first": "Гид",
+      "first": "gid",
       "lastname": "Гендугов",
       "age": 21,
       "currency": "RUB",

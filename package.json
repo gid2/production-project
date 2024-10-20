@@ -17,7 +17,7 @@
     "storybook:build": "build-storybook -c ./config/storybook",
     "start:dev:server": "node ./json-server/index.js",
     "prepare": "husky install",
-    "generate:slice": "./scripts/createSlice/index.js"
+    "generate:slice": "node ./scripts/createSlice/index.js"
   },
   "keywords": [],
   "author": "",

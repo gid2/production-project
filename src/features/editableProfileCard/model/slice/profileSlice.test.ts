@@ -1,11 +1,11 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currensy';
+import { ProfileSchema, ValidateProfileError } from '../../model/types/editableProfileCardSchema';
 import {
     profileActions,
     profileReducer,
 } from './profileSlice';
 
-import { ProfileSchema, ValidateProfileError } from '../types/profil';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 
 const data = {
