@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import {
     registerByUsername,
-} from 'features/RegisterByUsername/model/services/registerByUsername/registerByUsername';
+} from '../../model/services/registerByUsername/registerByUsername';
 
 interface RegisterSchema {
     isLoading: boolean;

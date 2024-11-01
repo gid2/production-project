@@ -1,4 +1,4 @@
 import { FC, lazy } from 'react';
-import { RegisterFormProps } from 'features/RegisterByUsername/ui/RegisterForm/RegisterForm.';
+import { RegisterFormProps } from '../RegisterForm/RegisterForm.';
 
 export const RegisterForm = lazy<FC<RegisterFormProps>>(() => import('./RegisterForm.'));

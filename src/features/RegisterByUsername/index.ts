@@ -1,4 +1,4 @@
-import { RegisterModal } from 'features/RegisterByUsername/ui/RegisterModal/RegisterModal';
+import { RegisterModal } from './ui/RegisterModal/RegisterModal';
 import { RegisterSchema } from './model/types/loginSchema';
 
 export {
