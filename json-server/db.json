@@ -673,6 +673,12 @@
       "userId": "1",
       "text": "fafsefv",
       "id": "49L5eky"
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "text": "lol",
+      "id": "_zlT03k"
     }
   ],
   "users": [
@@ -680,21 +686,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://sun1-96.userapi.com/impg/N6rvPeuqeFKoomhZ_eLVLsup2d0QZH3xxeEBGQ/aBwDY3bYqtk.jpg?size=240x240&quality=96&sign=779c1d6be97305dc967c9b410112d40a&type=album"
     },
     {
       "id": "2",
       "username": "gid",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://sun9-1.userapi.com/impg/epwLQnLuUjNDms2albpfU4Qx3CeJ8Zz1MRTutw/sf236PnxxrI.jpg?size=640x803&quality=96&sign=31cac0d26d9288e2f7562e64fdbe3ca9&type=album"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://sun9-1.userapi.com/impg/epwLQnLuUjNDms2albpfU4Qx3CeJ8Zz1MRTutw/sf236PnxxrI.jpg?size=640x803&quality=96&sign=31cac0d26d9288e2f7562e64fdbe3ca9&type=album"
     }
   ],
