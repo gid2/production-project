@@ -3,5 +3,7 @@ import { RegisterSchema } from './model/types/loginSchema';
 
 export {
     RegisterModal,
+};
+export type {
     RegisterSchema,
 };

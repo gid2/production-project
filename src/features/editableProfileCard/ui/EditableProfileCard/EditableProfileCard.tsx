@@ -39,7 +39,8 @@ import {
 import {
     fetchProfileData,
 } from '../../model/services/fetchProfileData/fetchPofileData';
-import { ValidateProfileError } from '../../model/types/editableProfileCardSchema';
+
+import { ValidateProfileError } from 'features/editableProfileCard/model/consts/consts';
 
 interface EditableProfileCardProps {
     className?: string;

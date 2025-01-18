@@ -1,4 +1,4 @@
-export { AddCommentFormSchema } from './model/types/addCommentForm';
+export type { AddCommentFormSchema } from './model/types/addCommentForm';
 // eslint-disable-next-line max-len
 export { getAddCommentFormText, getAddCommentFormError } from './model/selectors/addCommentFormSelectors/addCommentFormSelectors';
 

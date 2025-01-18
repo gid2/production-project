@@ -7,11 +7,13 @@ import {isUserAdmin, isUserManager, getUserRoles } from './model/selectors/roleS
 export {
     userReducer,
     userActions,
-    UserSchema,
-    User,
     getUserAuthData,
     getUserInited,
     isUserAdmin,
     isUserManager,
     getUserRoles
+};
+export type{
+    UserSchema,
+    User,
 };

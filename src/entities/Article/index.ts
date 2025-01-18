@@ -7,10 +7,8 @@ export {
     ArticleDetails,
 } from './ui/ArticleDetails/ArticleDetails';
 
-export {
+export type{
     Article,
-    ArticleView,
-    ArticleSortField,
 } from './model/types/article';
 
 export type {
@@ -19,3 +17,5 @@ export type {
 
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 export { getArticleDetailsData } from './model/selectors/articleDetails/articleDetails';
+export { ArticleView } from 'entities/Article/model/consts/consts';
+export { ArticleSortField } from 'entities/Article/model/consts/consts';
