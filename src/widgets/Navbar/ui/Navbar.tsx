@@ -9,14 +9,10 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { RegisterModal } from 'features/RegisterByUsername';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
 import cls from './Navbar.module.scss';
 import { HStack } from 'shared/ui/Stack';
-import { Icon } from 'shared/ui/Icon/Icon';
-import  NotificationIcon  from 'shared/assets/icons/Vector.svg';
-import { Dropdown } from 'shared/ui/Popups/components/Dropdown/Dropdown';
-import { Popover } from 'shared/ui/Popups';
-import { NotificationList } from 'entities/Notification';
+import { NotificationButton } from 'features/notificationButton';
+import { AvatarDropdown } from 'features/avatarDropdown';
 
 interface NavbarProps {
     className?: string;
@@ -27,9 +23,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const [isAuthModal, setIsAuthModal] = useState(false);
     const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
     const authData = useSelector(getUserAuthData);
-    const dispatch = useDispatch();
-    const isAdmin = useSelector(isUserAdmin)
-    const isManager = useSelector(isUserManager)
+
 
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
@@ -41,12 +35,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const onShowRegisterModal = useCallback(() => {
         setIsRegisterModalOpen(true);
     }, []);
-
-    const onLogout = useCallback(() => {
-        dispatch(userActions.logout());
-    }, [dispatch]);
-
-    const isAdminPanelAvailable = isAdmin || isManager
 
     if (authData) {
         return (
@@ -64,33 +52,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     {t('Создать статью')}
                 </AppLink>
                 <HStack gap={'16'} className={cls.actions}>
-                    <Popover
-                        direction={'bottom left'}
-                        trigger={(
-                        <Button theme={ButtonTheme.CLEAR}>
-                            <Icon Svg={NotificationIcon} inverted/>
-                        </Button>
-                    )}>
-                        <NotificationList  className={cls.notifications}/>
-                    </Popover>
-                    <Dropdown
-                        direction="bottom left"
-                         items={[
-                            ...(isAdminPanelAvailable ? [{
-                                content: t('Админка'),
-                                href: RoutePath.admin_panel,
-                            }] : []),
-                            {
-                                content: t('Профиль'),
-                                href: RoutePath.profile + authData.id,
-                            },
-                            {
-                                content: t('Выйти'),
-                                onClick: onLogout,
-                            },
-                        ]}
-                        trigger={<Avatar size={30} src={authData.avatar} />}
-                    />
+                    <NotificationButton />
+                    <AvatarDropdown />
                 </HStack>
             </header>
         );
